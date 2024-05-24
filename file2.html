@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UK Travel Destinations</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Custom CSS -->
+    <style>
+      .jumbotron {
+        background-image: url("https://source.unsplash.com/1600x900/?uk,travel");
+        max-height: 600px;
+
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+      }
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+      .contact-image {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">UK Travel</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#destinations">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Explore the Beauty of the United Kingdom</h1>
+        <p class="lead">Discover the best travel destinations in the UK.</p>
+      </div>
+    </div>
+
+    <!-- Destinations Section -->
+    <div class="container py-5" id="destinations">
+      <h2 class="text-center mb-4">Popular Destinations</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="https://source.unsplash.com/1600x900/?london"
+              class="card-img-top"
+              alt="London"
+            />
+            <div class="card-body">
+              <h5 class="card-title">London</h5>
+              <p class="card-text">
+                Experience the vibrant city of London with its rich history,
+                iconic landmarks, and diverse culture.
+              </p>
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#destinationModal"
+                data-destination-title="London"
+                data-destination-description="London, the capital of England and the United Kingdom, is a city steeped in history and culture. From the iconic Big Ben and Buckingham Palace to the world-class museums and lively West End theaters, London offers endless opportunities for exploration and entertainment. Wander through the bustling markets, savor delicious international cuisine, and soak in the city's unique blend of modern and traditional charm."
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="https://source.unsplash.com/1600x900/?edinburgh"
+              class="card-img-top"
+              alt="Edinburgh"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Edinburgh</h5>
+              <p class="card-text">
+                Explore the enchanting city of Edinburgh with its stunning
+                architecture, rich history, and lively festivals.
+              </p>
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#destinationModal"
+                data-destination-title="Edinburgh"
+                data-destination-description="Edinburgh, the capital of Scotland, is a city that seamlessly blends the old and the new. Explore the medieval Old Town with its winding streets and imposing Edinburgh Castle, or venture into the elegant Georgian New Town with its neoclassical architecture. Don't miss the vibrant cultural scene, including the world-famous Edinburgh Fringe Festival and the iconic Edinburgh Military Tattoo."
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="https://source.unsplash.com/1600x900/?lake-district"
+              class="card-img-top"
+              alt="Lake District"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Lake District</h5>
+              <p class="card-text">
+                Discover the breathtaking natural beauty of the Lake District, a
+                UNESCO World Heritage Site.
+              </p>
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#destinationModal"
+                data-destination-title="Lake District"
+                data-destination-description="The Lake District, located in the northwest of England, is a stunning natural wonderland. Explore the picturesque lakes, towering mountains, and charming villages that have inspired generations of writers and poets. Hike through the scenic trails, enjoy water sports on the tranquil lakes, or simply soak in the breathtaking vistas that have earned this region its UNESCO World Heritage status."
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Destination Modal -->
+    <div
+      class="modal fade"
+      id="destinationModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="destinationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="destinationModalLabel"></h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Destination description will be inserted here -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="container py-5" id="about">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 class="text-center mb-4">About Us</h2>
+          <p class="lead">
+            At UK Travel, we are passionate about helping you explore the best
+            destinations in the United Kingdom. Our team of travel experts
+            curates unique travel experiences tailored to your preferences. From
+            bustling cities to picturesque countryside, we offer a wide range of
+            travel packages to suit every taste.
+          </p>
+          <p>
+            Our goal is to provide you with unforgettable memories and a deep
+            appreciation for the rich history, culture, and natural beauty that
+            the UK has to offer. We believe in sustainable and responsible
+            tourism, ensuring that our travel practices have a positive impact
+            on local communities and the environment.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <img
+            src="https://source.unsplash.com/800x600/?uk,travel"
+            class="contact-image"
+            alt="Contact Image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container py-5" id="contact">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <img
+            src="https://source.unsplash.com/800x600/?uk,travel"
+            class="contact-image"
+            alt="Contact Image"
+          />
+        </div>
+        <div class="col-md-6">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                rows="5"
+                placeholder="Enter your message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3">
+      <div class="container">
+        <p>&copy; 2023 UK Travel. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+      $("#destinationModal").on("show.bs.modal", function (event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var title = button.data("destination-title"); // Extract the title from data-* attributes
+        var description = button.data("destination-description"); // Extract the description from data-* attributes
+
+        var modal = $(this);
+        modal.find(".modal-title").text(title); // Set the modal title
+        modal.find(".modal-body").html("<p>" + description + "</p>"); // Set the modal body (description)
+      });
+    </script>
+  </body>
+</html>
